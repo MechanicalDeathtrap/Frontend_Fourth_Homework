@@ -153,13 +153,7 @@ body {
 
 .delete-text {
   padding: 10px;
-  font-size: 0px;
-}
-
-.clear-all
-{
-  display: flex;
-  justify-content: center;
+  font-size: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
