@@ -23,18 +23,12 @@ list.addEventListener('click',
         element.target.childNodes[0].classList.toggle("item-text__completed");
         let id = parseInt(element.target.id);
 
-        console.log(`id ${id}`);
-
-        for(let item of listItems){
-
-            if (item.id === id && element.target.classList.length === 2){
-                item.isCancelled = "true";
-            }
-            if (item.id === id && element.target.classList.length === 1){
-                item.isCancelled = "false";
+        for (let item of listItems) {
+            if (item.id === id) {
+                item.isCancelled = !item.isCancelled;
             }
         }
-        console.log(element.target.classList);
+
         loadInStorage();
     }
 }, false);
@@ -92,8 +86,6 @@ function createItem(){
 
 function deleteTask(id) {
 
-    console.log(`delete ${id}`);
-
     listItems = listItems.filter(item => item.id !== id);
     document.getElementById(id).remove();
 }
@@ -122,8 +114,9 @@ function uploadItems() {
 
             let itemText = document.createElement("span");
             itemText.textContent = item.text;
-            if (itemText.className){
-                itemText.className = "item-text__completed";
+
+            if (item.isCancelled){
+                itemText.className = "item-text item-text__completed";
             }
             else{
                 itemText.className = "item-text";
@@ -142,7 +135,6 @@ function uploadItems() {
                 deleteTask(item.id);
             });
 
-            
             deleteButton.appendChild(deleteText);
             listItem.appendChild(deleteButton);
 
