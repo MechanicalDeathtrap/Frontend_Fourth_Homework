@@ -17,7 +17,7 @@ body
 .main
   &__screen
     width: 830px
-    height: 632px
+    min-height: 632px
     background-color: #151515
     border-radius: 20px
     box-shadow: 0 0 20px 8px rgba(58, 58, 58, 0.5)
@@ -94,6 +94,7 @@ body
     padding: 10px 0
     display: flex
     align-items: center
+    justify-content: space-between
 
 
 .todo-list__item.completed
@@ -104,8 +105,7 @@ body
   margin: 10px 20px
   font-size: 16px
   font-weight: 400
-  display: inline-flex
-  width: 88%
+  width: 30%
 
   &__completed
     color: #7a7777
@@ -124,6 +124,7 @@ body
   border-radius: 20px
   border-color: transparent
   cursor: pointer
+  margin: 10px 20px
 
 .delete-text
   padding: 10px

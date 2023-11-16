@@ -30,7 +30,6 @@ body {
 
 .main__screen {
   width: 830px;
-  height: 632px;
   background-color: #151515;
   border-radius: 20px;
   box-shadow: 0 0 20px 8px rgba(58, 58, 58, 0.5);
@@ -114,6 +113,7 @@ body {
   padding: 10px 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 
@@ -126,8 +126,8 @@ body {
   margin: 10px 20px;
   font-size: 16px;
   font-weight: 400;
-  display: inline-flex;
-  width: 88%;
+  display: inline-block;
+  width: 20%;
   color: white;
 }
 .item-text__completed {
@@ -149,6 +149,7 @@ body {
   border-radius: 20px;
   border-color: transparent;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .delete-text {
